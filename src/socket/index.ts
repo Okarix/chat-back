@@ -1,6 +1,6 @@
 import { Server } from 'socket.io';
 import User from '../user/models/User';
-import { default as Message } from '../chat/models/message';
+import { default as Message } from '../chat/models/Message';
 
 const initializeSocket = (io: Server) => {
 	io.on('connection', socket => {

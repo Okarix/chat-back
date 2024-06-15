@@ -9,8 +9,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/auth', authRouter);
-app.use('/users', userRouter);
-app.use('/messages', chatRouter);
+app.use(authRouter);
+app.use(userRouter);
+app.use(chatRouter);
 
 export default app;

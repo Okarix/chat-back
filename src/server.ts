@@ -7,7 +7,7 @@ import connectDB from './utils/db';
 const server = http.createServer(app);
 const io = new Server(server, {
 	cors: {
-		origin: 'http://localhost:3000',
+		origin: '*',
 		methods: ['GET', 'POST'],
 	},
 });
@@ -15,7 +15,7 @@ const io = new Server(server, {
 initializeSocket(io);
 connectDB();
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
 	console.log(`listening on *:${PORT}`);
 });
